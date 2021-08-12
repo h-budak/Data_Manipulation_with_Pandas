@@ -29,3 +29,6 @@ print(filtered["Float Value"].mean())
 # A function to find the unique answers of a set of data
 def get_answer_counts(data):
     return data["Answer"].value_counts()
+
+# Testing the answer count function
+print(get_answer_counts(filtered))    
