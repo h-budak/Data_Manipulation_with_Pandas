@@ -25,3 +25,7 @@ jeopardy_data["Float Value"] = jeopardy_data["Value"].apply(lambda x: float(x[1:
 # Filtering the dataset and finding the average value of those questions
 filtered = filter_data(jeopardy_data, ["King"])
 print(filtered["Float Value"].mean())
+
+# A function to find the unique answers of a set of data
+def get_answer_counts(data):
+    return data["Answer"].value_counts()
