@@ -17,4 +17,7 @@ def filter_data(data, words):
 
 # Testing the filter function
 filtered = filter_data(jeopardy_data, ["King", "England"])
-print(filtered["Question"]) 
+#print(filtered["Question"]) 
+
+# Adding a new column. If the value of the float column is not "None", then we cut off the first character (which is a dollar sign), and replace all commas with nothing, and then cast that value to a float. If the answer was "None", then we just enter a 0.
+jeopardy_data["Float Value"] = jeopardy_data["Value"].apply(lambda x: float(x[1:].replace(',','')) if x != "None" else 0)
