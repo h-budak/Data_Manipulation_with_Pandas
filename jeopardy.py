@@ -14,3 +14,7 @@ def filter_data(data, words):
   filter = lambda x: all(word.lower() in x.lower() for word in words)
   # Applies the labmda function to the Question column and returns the rows where the function returned True
   return data.loc[data["Question"].apply(filter)] 
+
+# Testing the filter function
+filtered = filter_data(jeopardy_data, ["King", "England"])
+print(filtered["Question"]) 
