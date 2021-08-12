@@ -13,4 +13,4 @@ def filter_data(data, words):
   # Lowercases all words in the list of words as well as the questions. Returns true is all of the words in the list appear in the question.
   filter = lambda x: all(word.lower() in x.lower() for word in words)
   # Applies the labmda function to the Question column and returns the rows where the function returned True
-  return data.loc[data["Question"].apply(filter)]
+  return data.loc[data["Question"].apply(filter)] 
